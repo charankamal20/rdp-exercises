@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        button {    
+            border-radius: 5rem;
+            font-size: 2rem;
+            padding: 10px 20px;
+            border: none;
+            background-color: red;
+            transition: 50ms linear;            
+        }
+        button:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>  
+    <button class="">Save</button>
+    <script>
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", () => {
+            button.style.backgroundColor = "black";
+            button.style.color = "white";
+            button.textContent = "Saved";
+        });
+    </script>
+</body>
+</html>
