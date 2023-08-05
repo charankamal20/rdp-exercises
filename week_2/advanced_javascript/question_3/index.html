@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-violet-500 to-fuchsia-500 flex justify-center">
+    <div class="dropdown__container w-1/3 max-w-[250px] min-w-[175px] flex flex-col gap-2 align-middle mt-20">
+        <div id="dropdown__button" class="rounded-md shadow-sm w-1/2 flex align-middle ml-auto justify-around bg-black/30 hover:bg-black/50 p-1 py-2 font-bold" >
+            <span class="text-white ">Options</span>
+            <svg id="dropdown__button-arr" class="w-3" fill="#FFF" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" transform="matrix(1, 0, 0, -1, 0, 0)" stroke="#FFF" stroke-width="0.0033"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path> </g>
+            </svg>
+        </div>
+        <div id="dropdown__menu" class="hidden rounded-md w-full flex-col gap-1 bg-white ">
+            <div class="dropdown__menu-option hover:bg-[#8050EC] hover:text-white flex justify-start align-middle px-2 py-2 mt-2 w-[93%] rounded-md ml-auto mr-auto">
+                <svg class="w-5" fill="#9981E7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><g id="pencil"><path class="cls-1" d="m21.84 5-4.31-3.62a1.17 1.17 0 0 0-.87-.27 1.15 1.15 0 0 0-.8.42L3.1 16.65a.54.54 0 0 0-.11.26l-.84 6.44a.5.5 0 0 0 .49.56h.15L9 22a.47.47 0 0 0 .24-.15L22 6.69A1.19 1.19 0 0 0 21.84 5zm-.62 1L8.56 21l-5.32 1.7.76-5.51 12.66-15a.21.21 0 0 1 .27 0l4.27 3.59a.19.19 0 0 1 .02.27z"/><path class="cls-1" d="M15 5.75a.51.51 0 0 0-.71.06.49.49 0 0 0 .06.7l3.05 2.61a.49.49 0 0 0 .32.12.52.52 0 0 0 .38-.17.51.51 0 0 0-.1-.71z"/></g>
+                </svg>
+                <span class="px-3">Edit</span>
+            </div>
+            <div class="dropdown__menu-option hover:bg-[#8050EC] hover:text-white flex justify-start align-middle px-2 py-2 w-[93%] rounded-md ml-auto mr-auto ">
+                <svg class="w-5" fill="#9981E7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 10v10a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1zM6 14H5V5h9v1a1 1 0 0 0 2 0V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h2a1 1 0 0 0 0-2z"/>
+                </svg>
+                <span class="px-3">Duplicate</span>
+            </div>
+            <div class="grey-line w-full h-[2px] bg-gray-100/80" ></div>
+            <div class="dropdown__menu-option hover:bg-[#8050EC] hover:text-white flex justify-start align-middle px-2 py-2 w-[93%] rounded-md ml-auto mr-auto ">
+                <svg class="w-4" fill="#9981E7" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 6v8h10V6H3zM1 6H0V0h16v6h-1v10H1V6zm4 2h6v2H5V8zM2 2v2h12V2H2z" fill-rule="evenodd"></path> </g></svg>
+                <span class="px-4">Archive</span>
+            </div>
+            <div class="dropdown__menu-option hover:bg-[#8050EC] hover:text-white flex justify-start align-middle px-2 py-2 w-[93%] rounded-md ml-auto mr-auto ">
+                <svg class="w-5" fill="#9981E7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 10H6.2C5.0799 10 4.51984 10 4.09202 10.218C3.71569 10.4097 3.40973 10.7157 3.21799 11.092C3 11.5198 3 12.0799 3 13.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.0799 20 6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V13.2C21 12.0799 21 11.5198 20.782 11.092C20.5903 10.7157 20.2843 10.4097 19.908 10.218C19.4802 10 18.9201 10 17.8 10H17M12 4V16M12 4L9 7M12 4L15 7" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+                </svg>
+                <span class="px-3">Move</span>
+            </div>
+            <div class="grey-line w-full h-[2px] bg-gray-100/80" ></div>
+            <div class="dropdown__menu-option hover:bg-[#8050EC] hover:text-white flex justify-start align-middle px-2 py-2 w-[93%] rounded-md ml-auto mr-auto mb-2">
+                <svg class="w-5" fill="#9981E7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 12V17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14 12V17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M4 7H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6 10V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V10" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+                </svg>
+                <span class="px-3">Delete</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
