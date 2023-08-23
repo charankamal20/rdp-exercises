@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/rdp-exercises/week_4/hello-world/static/css/main.073c9b0a.css",
+    "main.js": "/rdp-exercises/week_4/hello-world/static/js/main.ac346f0f.js",
+    "static/js/787.a9120f67.chunk.js": "/rdp-exercises/week_4/hello-world/static/js/787.a9120f67.chunk.js",
+    "static/media/logo.svg": "/rdp-exercises/week_4/hello-world/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/rdp-exercises/week_4/hello-world/index.html",
+    "main.073c9b0a.css.map": "/rdp-exercises/week_4/hello-world/static/css/main.073c9b0a.css.map",
+    "main.ac346f0f.js.map": "/rdp-exercises/week_4/hello-world/static/js/main.ac346f0f.js.map",
+    "787.a9120f67.chunk.js.map": "/rdp-exercises/week_4/hello-world/static/js/787.a9120f67.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.ac346f0f.js"
+  ]
+}
