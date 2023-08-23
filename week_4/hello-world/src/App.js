@@ -1,23 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import SignUp from './components/signUp'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='flex justify-center items-center flex-col'>
+      <img src={logo} className='w-20 h-20 m-2' alt='logo' />
+      <h1 className='text-2xl font-bold'>Hello World!</h1>
+      <div className='flex flex-col items-end m-6 border border-gray-700 p-4 rounded-lg'>
+        <SignUp />
+      </div>
     </div>
   );
 }
