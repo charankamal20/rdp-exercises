@@ -10,9 +10,11 @@ export default function SignUp()    {
 
     return (
         <>
-            <Input displayText="First Name" />
-            <Input displayText="Last Name" />
-            <Button displayText='Sign Up' handleClick={signup} />
+            <form name='Sign Up form'>
+                <Input displayText="First Name" />
+                <Input displayText="Last Name" />
+                <Button displayText='Sign Up' handleClick={signup} />
+            </form>
         </>
     );
 }
