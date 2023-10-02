@@ -3,7 +3,7 @@ import { useState } from 'react';
 import TodoCard from './todoCard';
 import TodoForm from './todoForm';
 
-export default function TodoList({tasks, setTasks, setNotes}) {
+export default function TodoList({tasks, setTasks, setNotes, currentBook}) {
 
     const [formState, setFormState] = useState(false);
     const [formSubmit, setFormSubmit] = useState(false);
@@ -57,7 +57,7 @@ export default function TodoList({tasks, setTasks, setNotes}) {
         <div className='bg-gradient-to-b from-darkGray to-black/60 shadow-lg relative flex flex-col w-full rounded-[4px]'>
             <div id='header-group' className='w-full grid grid-cols-5 p-8 gap-4'>
                 <button className='rounded-[4px] col-span-4 relative bg-white text-left text-darkGray py-3 px-6 transition-shadow hover:shadow-xl'
-                    onMouseEnter={handleFormOpen}
+                    onClick={handleFormOpen}
                 >
                 Start Reading...
                 </button>
@@ -67,25 +67,30 @@ export default function TodoList({tasks, setTasks, setNotes}) {
                     form="todo-form"
                 >Add</button>
 
-                <div onMouseLeave={handleFormOpen} className="relative col-span-4">
-                <TodoForm
-                    setFormState={setFormState}
-                    formState={formState}
-                    handleAddTask={handleAddTask}
-                    submitFlag={formSubmit}
-                />
+                <div className="relative col-span-4">
+                    <TodoForm
+                        currentBook={currentBook}
+                        setFormState={setFormState}
+                        formState={formState}
+                        handleAddTask={handleAddTask}
+                        submitFlag={formSubmit}
+                    />
                 </div>
                 <div className='flex flex-col xl:grid xl:grid-cols-2 gap-2 col-span-5 overflow-y-scroll max-h-96 rounded-[4px]'>
                 { tasks.length === 0 ? (
                     <h1 id='empty-list' className='text-white/80 px-6'>Your Tasks go here.</h1>
-                ) : (tasks.map(task =>
-                        <TodoCard
+                ) : (tasks.map(task => {
+                    if(task.book === currentBook) {
+                        return <TodoCard
                         key={task.createdAt}
                         item={task}
                         markAsCompleted={markAsCompleted}
                         deleteTask={deleteTask}
                         addNotes={handleNotesChange}
-                    />))}
+                        />
+                    }
+                    return <></>
+                }))}
                 </div>
             </div>
         </div>

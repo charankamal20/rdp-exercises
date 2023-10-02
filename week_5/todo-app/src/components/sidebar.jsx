@@ -10,7 +10,7 @@ export default function Sidebar({items})   {
             <div className="w-full h-1 bg-white/80 rounded-md"></div>
             <div className="flex flex-col gap-3 mt-2">
                 { items.length === 0 ? (
-                    <span>List is empty...</span>
+                    <span className="text-black/60">List is empty...</span>
                 ): 
                 ( items.map(item => <div>
                     <Note 
