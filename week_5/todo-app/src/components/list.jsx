@@ -1,5 +1,5 @@
 // List.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TodoCard from './todoCard';
 import TodoForm from './todoForm';
 
@@ -7,6 +7,12 @@ export default function TodoList({tasks, setTasks, setNotes, currentBook}) {
 
     const [formState, setFormState] = useState(false);
     const [formSubmit, setFormSubmit] = useState(false);
+    const [listEmpty, setListEmpty] = useState(true);
+
+    useEffect(() => {
+        const isEmpty = tasks.every(task => task.book !== currentBook);
+        setListEmpty(isEmpty);
+    }, [tasks, currentBook]);
 
     const handleAddTask = (task) => {
         setTasks([...tasks, task]);
@@ -77,9 +83,8 @@ export default function TodoList({tasks, setTasks, setNotes, currentBook}) {
                     />
                 </div>
                 <div className='flex flex-col xl:grid xl:grid-cols-2 gap-2 col-span-5 overflow-y-scroll max-h-96 rounded-[4px]'>
-                { tasks.length === 0 ? (
-                    <h1 id='empty-list' className='text-white/80 px-6'>Your Tasks go here.</h1>
-                ) : (tasks.map(task => {
+                {listEmpty ? (<h1 id='empty-list' className='text-white/80 px-6'>Your Goals go here.</h1>) : 
+                    (tasks.map(task => {
                     if(task.book === currentBook) {
                         return <TodoCard
                         key={task.createdAt}
@@ -87,9 +92,9 @@ export default function TodoList({tasks, setTasks, setNotes, currentBook}) {
                         markAsCompleted={markAsCompleted}
                         deleteTask={deleteTask}
                         addNotes={handleNotesChange}
-                        />
-                    }
-                    return <></>
+                        />;
+                    }   
+                    return <></>;
                 }))}
                 </div>
             </div>

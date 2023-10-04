@@ -32,9 +32,9 @@ function App() {
         return newTask;
       })
       setTasks(newTasks);
-      setCurrentBook(newBook);
     }
     setBooks([...books, newBook]);
+    setCurrentBook(newBook.title);
   }
 
   const addNewBookFromArg = (t) => {
@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="overflow-hidden text-xl bg-gradient-to-br from-white to-lightGray h-screen w-full grid grid-cols-4 grid-rows-6 justify-items-center items-start">
       <div id='body-container' className='row-start-1 row-span-1 w-96 max-w-6xl md:w-4/5 lg:w-4/5 col-span-3 flex gap-2 h-20 my-24'>
-        <h1 className='text-2xl md:text-4xl flex gap-2'>Welcome to <h1 className='font-bold'>BookTrackr.</h1></h1>
+        <h1 className='text-2xl md:text-4xl flex gap-2 drop-shadow-lg'>Welcome to <h1 className='font-bold drop-shadow-xl'>BookTrackr.</h1></h1>
       </div>
       <div className='text-lg row-start-2 m-16 row-end-6 col-span-3 w-96 max-w-6xl md:w-4/5 lg:w-4/5 flex flex-col mx-4 gap-2 justify-between '>
         <div className='w-full relative mb-4 flex justify-between text-2xl' >
@@ -57,14 +57,13 @@ function App() {
                   onChange={handleBookChange}
                   value={book.title}
                   placeholder='What book are you reading today?' 
-                  className='font-bold bg-transparent text-right' />
+                  className='font-bold w-full bg-transparent text-right' />
                 <button 
                   onClick={addNewBook} >
                   <svg 
                     className={`h-6 relative top-px fill-darkGray transition-all duration-300 hover:fill-black hover:rotate-90 overflow-hidden ${book.title === '' ? 'w-0' : 'w-6'}`}
                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g data-name="add" id="add-2"> <g> <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="19" y2="5"></line> <line fill='none' stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="5" x2="19" y1="12" y2="12"></line> </g> </g> </g> </g></svg>
                 </button>
-
               </>
 
             ):(
@@ -98,9 +97,10 @@ function App() {
       </div>
 
       <div className='col-start-4 w-full row-start-1 row-span-6 bg-gradient-to-br from-darkGray to-black/60 h-full p-12'>
-        <Sidebar 
-          items={notes}
-        />
+          <Sidebar 
+            items={notes}
+            tasks={tasks}
+          />
       </div>
       <div className='w-96 max-w-6xl md:w-4/5 lg:w-4/5 text-sm h-full col-start-1 col-end-4 row-start-6 flex justify-start items-center'>
         <Footer></Footer>
