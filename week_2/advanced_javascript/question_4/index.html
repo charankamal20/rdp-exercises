@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="bg-gradient-to-r from-blue-300 to-blue-500 flex justify-center items-center mt-10">
+    <div class="navigation__container w-2/3 max-w-[800px] min-w-[300px] flex flex-col gap-3">
+        <nav id="navigation__bar" class="w-full bg-blue-950/30 rounded-2xl text-white font-semibold text-lg">
+            <ul class="grid grid-cols-3 gap-1">
+                <li id="navigation__option-recent" class="flex justify-center p-3 m-[5px] rounded-xl outline-[3px] outline outline-offset-[2px] outline-white/70 text-blue-700 bg-white">Recent</li>
+                <li id="navigation__option-popular" class="flex justify-center p-3 m-[5px] rounded-xl hover:bg-white/10 outline-[3px] outline-offset-[2px] outline-white/70">Popular</li>
+                <li id="navigation__option-trending" class="flex justify-center p-3 m-[5px] rounded-xl hover:bg-white/10 outline-[3px] outline-offset-[2px] outline-white/70">Trending</li>
+            </ul> 
+        </nav>
+        <section id="navigation__content-recent" class="bg-white w-full flex flex-col rounded-2xl">
+            <div class="topic mt-4 ml-4 mr-4 p-3">
+                <h3 class="font-bold text-lg">Is tech making coffee better or worse?</h3>
+                <span class="navigation__content-content text-gray-500 font-semibold">Jan 7 &#8226; 29 comments &#8226; 16 shares</span>
+            </div>
+            <div class="topic mb-4 ml-4 mr-4 p-3">
+                <h3 class="font-bold text-lg">Is tech making coffee better or worse?</h3>
+                <span class="navigation__content-content text-gray-500 font-semibold">Jan 7 &#8226; 29 comments &#8226; 16 shares</span>
+            </div>
+        </section>
+        <section id="navigation__content-popular" class="bg-white w-full hidden flex-col rounded-2xl">
+            <div class="topic mt-4 ml-4 mr-4 p-3">
+                <h3 class="font-bold text-lg">Does drinking coffee make you smarter?</h3>
+                <span class="navigation__content-content text-gray-500 font-semibold">Jan 7 &#8226; 29 comments &#8226; 15 shares</span>
+            </div>
+            <div class="topic mb-4 ml-4 mr-4 p-3">
+                <h3 class="font-bold text-lg">So you've bought coffee... now what?</h3>
+                <span class="navigation__content-content text-gray-500 font-semibold">Jan 7 &#8226; 29 comments &#8226; 16 shares</span>
+            </div>
+        </section>
+        <section id="navigation__content-trending" class="bg-white w-full hidden flex-col rounded-2xl">
+            <div class="topic mt-4 ml-4 mr-4 p-3">
+                <h3 class="font-bold text-lg">Ask Me Anything: 10 answers to your questions about coffee</h3>
+                <span class="navigation__content-content text-gray-500 font-semibold">2d ago &#8226; 29 comments &#8226; 14 shares</span>
+            </div>
+            <div class="topic mb-4 ml-4 mr-4 p-3">
+                <h3 class="font-bold text-lg">Is tech making coffee better or worse?</h3>
+                <span class="navigation__content-content text-gray-500 font-semibold">Jan 7 &#8226; 29 comments &#8226; 16 shares</span>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
