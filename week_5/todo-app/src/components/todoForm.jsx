@@ -29,7 +29,7 @@ export default function TodoForm({ formState, handleAddTask, setFormState, curre
     return (
       <div className={`z-40 overflow-hidden transition-all absolute shadow-2xl w-full -top-16 ${formState ? 'h-52' : 'h-0 -top-[68px]'} `}>
         <form id="todo-form" 
-          className={`flex flex-col text-black bg-white py-2 px-4 w-full rounded-[4px]`}
+          className={`flex flex-col text-black bg-white dark:bg-lightGray py-2 px-4 w-full rounded-[4px]`}
           onSubmit={handleTaskSubmittion}
           >
           <div className="flex justify-between items-center">
@@ -45,14 +45,14 @@ export default function TodoForm({ formState, handleAddTask, setFormState, curre
 
           <input
             required
-            className="block bg-lightGray rounded-[4px] w-full mt-2 mb-4 p-2"
+            className="block dark:bg-white bg-lightGray rounded-[4px] w-full mt-2 mb-4 p-2"
             type="text"
             onChange={handleGoalChange}
             value={task.Goal}
           />
           <label>Chapter Name.</label>
           <input
-            className="block bg-lightGray rounded-[4px] w-full mt-2 mb-2 p-2"
+            className="block dark:bg-white bg-lightGray rounded-[4px] w-full mt-2 mb-2 p-2"
             type="text"
             onChange={handleChapterChange}
             value={task.ChapterName}

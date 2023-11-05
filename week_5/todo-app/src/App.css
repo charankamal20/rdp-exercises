@@ -3,7 +3,9 @@
   text-align: center;
 }
 
-
+.dark {
+  @apply bg-black text-zinc-100;
+}
 
 body,html {
   font-family: 'Poppins', sans-serif;

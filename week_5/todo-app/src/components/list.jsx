@@ -60,7 +60,7 @@ export default function TodoList({tasks, setTasks, setNotes, currentBook}) {
     }
 
     return (
-        <div className='bg-gradient-to-b from-darkGray to-black/60 shadow-lg relative flex flex-col w-full rounded-[4px]'>
+        <div className='bg-gradient-to-b dark:from-darkGray dark:to-darkGray from-darkGray to-black/60 shadow-lg relative flex flex-col w-full rounded-[4px]'>
             <div id='header-group' className='w-full grid grid-cols-5 p-8 gap-4'>
                 <button className='rounded-[4px] col-span-4 relative bg-white text-left text-darkGray py-3 px-6 transition-shadow hover:shadow-xl'
                     onClick={handleFormOpen}
@@ -68,7 +68,7 @@ export default function TodoList({tasks, setTasks, setNotes, currentBook}) {
                 Start Reading...
                 </button>
                 <button
-                    className='font-bold col-span-1 bg-yellow-500 rounded-[4px] transition-all duration-300 hover:shadow-xl hover:m-px hover:text-white'
+                    className='font-bold col-span-1 bg-yellow-500 dark:bg-stone-800 rounded-[4px] transition-all duration-300 hover:shadow-xl hover:m-px hover:text-white'
                     type='submit'
                     form="todo-form"
                 >Add</button>
